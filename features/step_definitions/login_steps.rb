@@ -1,17 +1,21 @@
+Given(/^I navigate to home page$/) do
+  usps.home_page.visit
+end
+
 When(/^I press on Signin button on home page$/) do
-  @browser.find_element(:id, "anchor-login").click
+  usps.home_page.login_button.click
 end
 
 Then(/^I type my login "([^"]*)"$/) do |login|
-  @browser.find_element(:id, "userName").send_keys login
+  usps.login_page.login_field.send_keys login
 end
 
 And(/^I type my password "([^"]*)"$/) do |password|
-  @browser.find_element(:id, "password").send_keys password
+  usps.login_page.password_field.send_keys password
 end
 
 Then(/^I press on Signin button on login page$/) do
-  @browser.find_element(:id, "sign-in-button").click
+  usps.login_page.singin_button.click
 end
 
 Then(/^I will see invalid login or password error message$/) do

@@ -4,17 +4,6 @@ class FindZipCodePage < PageActions
     "https://tools.usps.com/go/ZipLookupAction_input"
   end
 
-  def address_text_field
-    @browser.find_element(:id, "tAddress")
-  end
-
-  def city_text_field
-    @browser.find_element(:id, "tCity")
-  end
-
-  def state_dropdown
-    @browser.find_element(:css, "span.select-current-text")
-  end
 
   def select_state state
     state_dropdown.click
@@ -28,14 +17,7 @@ class FindZipCodePage < PageActions
     #    end
     # end
   end
-
-  def find_zip_code_button
-    @browser.find_element(:id, "lookupZipFindBtn")
-  end
-
-  def table_result
-    @browser.find_element(:id, "result-list").find_elements(:tag_name, "li")
-  end
+  
 
   def collect_zip_code
     zip_array = []

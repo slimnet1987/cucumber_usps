@@ -17,7 +17,7 @@ class FindZipCodePage < PageActions
     #    end
     # end
   end
-  
+
 
   def collect_zip_code
     zip_array = []

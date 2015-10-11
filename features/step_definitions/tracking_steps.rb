@@ -17,3 +17,7 @@ end
 Then(/^I type "([^"]*)" to global search field$/) do |tracking_number|
   @browser.find_element(:id, "global-header--search-track").send_keys tracking_number
 end
+
+Then(/^I press on Global search$/) do
+  @browser.find_element(:css, "input.search--submit").click
+end

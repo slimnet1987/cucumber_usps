@@ -4,6 +4,18 @@ require 'pry'
 
 require_relative '../page_model/page_actions.rb'
 
+SERVER_LABELS = {
+    :qa1 => "integration.usps.com",
+    :qa2 => "release.usps.com",
+    :production => "usps.com"
+}
+
+def get_env
+  env = (ENV['SERVER'] || :production)
+  SERVER_LABELS[env.to_sym]
+end
+
+
 
 # load all .rb files before...
 Dir["../page_model/*.rb"].each {|file| require file}

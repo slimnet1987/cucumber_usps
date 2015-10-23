@@ -1,4 +1,4 @@
-class HomePage < PageActions
+class HomePage < PageAction
 
   def path
     "http://www.usps.com"

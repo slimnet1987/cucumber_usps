@@ -15,7 +15,7 @@ And(/^I type my password "([^"]*)"$/) do |password|
 end
 
 Then(/^I press on Signin button on login page$/) do
-  usps.login_page.singin_button.click
+  usps.login_page.singin_button
 end
 
 Then(/^I will see invalid login or password error message$/) do

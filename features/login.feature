@@ -1,4 +1,5 @@
 @login
+#all scenarios for login
 Feature: Scenarios for login functionality
 
   Scenario: Verify Login error messages
@@ -24,7 +25,7 @@ Feature: Scenarios for login functionality
     Then I press on Signin button on login page
     Then I will see login length error message
 
-  Scenario: Verify that password should be more than 9 characters
+  Scenario Outline: Verify that password should be more than 9 characters
     Given I navigate to home page
     When I press on Signin button on home page
     Then I type my login "invalid-login"

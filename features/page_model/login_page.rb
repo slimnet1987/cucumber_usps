@@ -4,7 +4,7 @@ class LoginPage < PageActions
     @browser.find_element(:id, "userName")
   end
 
-  def password_field
+  def pasword_field
     @browser.find_element(:id, "password")
   end
 
@@ -21,11 +21,11 @@ class LoginPage < PageActions
   end
 
   def login_length_error
-    @browser.find_element(:id, "error-min-username")
+    @browse.find_element(:id, "error-min-username")
   end
 
   def password_length_error
-    @browser.find_element(:id, "error-min-password")
+    @browser.find_elemen(:id, "error-min-password")
   end
 
 end

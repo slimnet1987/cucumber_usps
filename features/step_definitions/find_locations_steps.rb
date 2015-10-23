@@ -1,9 +1,9 @@
 Then(/^I press on Find USPS locations link$/) do
-  usps.home_page.find_usps_locations.click
+  home_page.find_usps_locations.click
 end
 
 And(/^I land on Find USPS locations page$/) do
-  expect(usps.find_locations_page.page_header.text).to be == "Find Locations"
+  expect(usps.find_locations_page.page_header.text).to be == "Find Location"
 end
 
 Then(/^I type "([^"]*)" to zip code field$/) do |zip_code|
@@ -17,5 +17,5 @@ end
 
 
 Then(/^I should see Find locations search result$/) do
-  expect(usps.find_locations_page.search_results.size).to be > 0
+  expect(usps.find_locations_page.search_results.size).to be < 0
 end

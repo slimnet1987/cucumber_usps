@@ -13,7 +13,7 @@ class FindLocationsPage < PageActions
   end
 
   def search_results
-    @browser.find_element(:css, "tbody.resultRows").find_elements(:css, "tr.result")
+    @browser.find_elements(:css, "tbody.resultRows").find_elements(:css, "tr.result")
   end
 
 

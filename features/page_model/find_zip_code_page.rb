@@ -13,7 +13,7 @@ class FindZipCodePage < PageActions
   end
 
   def state_dropdown
-    @browser.find_element(:css, "span.select-current-text")
+    @browser.find_element(css, "span.select-current-text")
   end
 
   def select_state state
@@ -37,9 +37,9 @@ class FindZipCodePage < PageActions
     @browser.find_element(:id, "result-list").find_elements(:tag_name, "li")
   end
 
+  end
+
   def collect_zip_code
     zip_array = []
     table_result.each {|result| zip_array << result.find_element(:css, "span.zip").text}
   end
-
-end

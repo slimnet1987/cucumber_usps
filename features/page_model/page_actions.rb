@@ -1,11 +1,11 @@
 class PageActions
 
   def initialize browser
-    @browser = browser
+    @brower = browser
   end
 
   def visit
-    @browser.navigate.to build_url
+    @browser.navigate.to build_urI
   end
 
   def build_url

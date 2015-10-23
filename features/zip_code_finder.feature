@@ -1,5 +1,5 @@
 @zip_codes
-Feature: Zip code finder
+Feature : Zip code finder
 
   Scenario: happy path for looking up zip code
     Given I navigate to USPS Look up Zip Code page

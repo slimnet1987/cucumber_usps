@@ -1,5 +1,5 @@
 @find_locations
-Feature: Scenarios for find locations
+Feature : Scenarios for find locations
 
   Scenario: User able to search USPS locations
     Given I navigate to home page

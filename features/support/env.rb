@@ -1,4 +1,4 @@
-require 'selenium-webdriver'
+require 'selenium_webdriver'
 require 'rspec'
 require 'pry'
 
@@ -28,5 +28,5 @@ def create_browser
 end
 
 def usps
-  @usps ||= USPS.new @browser
+  @usps ||= USPC.new @browser
 end

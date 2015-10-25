@@ -16,5 +16,9 @@ class USPS < PageActions
     @find_locations_page ||= FindLocationsPage.new @browser
   end
 
+  def buy_stamps_page
+    @buy_stamps_page ||= BuyStampsPage.new @browser
+  end
+
 
 end

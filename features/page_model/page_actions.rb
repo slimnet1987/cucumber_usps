@@ -1,3 +1,15 @@
+
+
+
+
+
+
+
+
+
+
+
+
 class PageActions
 
   def initialize browser

@@ -24,7 +24,17 @@ class PageActions
     self.path.gsub!("usps.com", get_env)
   end
 
+  def scroll_all_way_down
+    @browser.find_elements(:tag_name, "a").last.location_once_scrolled_into_view
+  end
+
+  def resize_browser(x,y)
+    @browser.manage.window.resize_to(x,y)
+    # @browser.manage.window.maximize
+  end
+
 end
+
 
 
 

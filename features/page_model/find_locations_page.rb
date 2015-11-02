@@ -1,5 +1,9 @@
 class FindLocationsPage < PageActions
 
+  def path
+    "https://tools.usps.com/go/POLocatorAction!input.action"
+  end
+
   def page_header
     @browser.find_element(:id, "polo-index-title").find_element(:tag_name, "h1")
   end
@@ -15,6 +19,31 @@ class FindLocationsPage < PageActions
   def search_results
     @browser.find_element(:css, "tbody.resultRows").find_elements(:css, "tr.result")
   end
+
+  def find_by_tag_and_text
+    @browser.find_element(:xpath, "//span[text()='20 miles']")
+  end
+
+  def find_by_link_text
+    @browser.find_element(:link_text, "Browse our FAQs ›")
+  end
+
+  def wait_for_faq
+    wait = Selenium::WebDriver::Wait.new(:timeout => 30)
+    # wait.until{@browser.find_element(:link_text, "Browse our FAQs ›")}
+    wait.until{find_by_link_text}
+  end
+
+
+
+
+
+
+
+
+
+
+
 
 
 

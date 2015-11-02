@@ -22,8 +22,14 @@ Dir["../page_model/*.rb"].each {|file| require file}
 
 DEFAULT_TIMEOUT = 10
 
+def get_browser
+  env = (ENV['BROWSER'] || :firefox)
+  env.to_sym
+end
+
+
 def create_browser
-  @browser = Selenium::WebDriver.for :firefox
+  @browser = Selenium::WebDriver.for get_browser
   @browser.manage.timeouts.implicit_wait = DEFAULT_TIMEOUT #for waiting an elements on the needed page
 end
 
